@@ -18,3 +18,8 @@
     }
     list.forEach((item) =>
         item.addEventListener('mouseover', activeLink));
+    //map
+    if (navigator.onLine)
+        document.getElementsByClassName('img-map')[0].classList.add('hide')
+    else
+        document.getElementsByClassName('map-cont')[0].classList.add('hide')

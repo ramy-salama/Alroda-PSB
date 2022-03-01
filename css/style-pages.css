@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+@import url('./cairo.css');
+@import url('./font-awesome.css');
 * {
     margin: 0;
     padding: 0;
@@ -86,6 +87,7 @@ body {
 
 footer {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 30px;
     margin-top: 1.5rem;
@@ -100,13 +102,6 @@ footer span {
     color: var(--main);
 }
 
-footer ion-icon {
-    padding-top: 13px;
-    color: red;
-    width: 28px;
-    height: 28px;
-}
-
 .card-body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
 }
@@ -115,11 +110,6 @@ footer ion-icon {
     footer {
         gap: 20px;
         font-size: 1.75rem;
-    }
-    footer ion-icon {
-        padding-top: 10px;
-        width: 27px;
-        height: 27px;
     }
 }
 
@@ -131,11 +121,6 @@ footer ion-icon {
         gap: 15px;
         font-size: 1.5rem;
     }
-    footer ion-icon {
-        padding-top: 7px;
-        width: 24px;
-        height: 24px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -145,10 +130,5 @@ footer ion-icon {
     footer {
         gap: 10px;
         font-size: 1.2rem;
-    }
-    footer ion-icon {
-        padding-top: 5px;
-        width: 20px;
-        height: 20px;
     }
 }

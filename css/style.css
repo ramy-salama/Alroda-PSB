@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+@import url('./cairo.css');
+@import url('./font-awesome.css');
 * {
     margin: 0;
     padding: 0;
@@ -112,7 +113,7 @@ marquee span {
     text-align: center;
 }
 
-.navigation ul li a .icon ion-icon {
+.navigation ul li a .icon i {
     font-size: 1.75em;
 }
 
@@ -269,7 +270,9 @@ marquee span {
 
 /*school*/
 
-.school {
+.school,
+.img-map,
+.map-cont {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -277,7 +280,8 @@ marquee span {
     margin-top: 10px;
 }
 
-.school .front {
+.school .front,
+.img-map .front {
     position: relative;
     display: grid;
     background: var(--white);
@@ -286,7 +290,8 @@ marquee span {
     border-radius: 20px;
 }
 
-.school .front img {
+.school .front img,
+.img-map img {
     width: 100%;
 }
 
@@ -300,6 +305,9 @@ marquee span {
     box-shadow: 0 .5rem 1rem rgba(88, 88, 88, 0.1);
     border-radius: .5rem;
     width: 100%;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
 }
 
 
@@ -307,9 +315,9 @@ marquee span {
 
 footer {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-top: 1.5rem;
     font-size: 2rem;
     padding: .2rem;
     color: var(--heading);
@@ -321,11 +329,12 @@ footer span {
     color: var(--main);
 }
 
-footer ion-icon {
-    padding-top: 20px;
-    color: red;
-    width: 28px;
-    height: 28px;
+footer a {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
 }
 
 @media (max-width:768px) {
@@ -352,6 +361,10 @@ footer ion-icon {
     .cardBox {
         grid-template-columns: repeat(2, 1fr);
     }
+    footer {
+        gap: 20px;
+        font-size: 1.75rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -361,10 +374,15 @@ footer ion-icon {
     .front {
         overflow-x: auto;
     }
-    footer ion-icon {
-        padding-top: 7px;
-        width: 20px;
-        height: 20px;
+    footer {
+        gap: 15px;
+        font-size: 1.5rem;
+    }
+    footer a {
+        margin-top: 12px;
+    }
+    footer a svg {
+        width: 30px;
     }
 }
 
@@ -393,9 +411,11 @@ footer ion-icon {
         left: initial;
         color: var(--white);
     }
-    footer ion-icon {
-        padding-top: 7px;
-        width: 20px;
-        height: 20px;
+    footer {
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+    footer a {
+        margin-top: 7px;
     }
 }
